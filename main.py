@@ -96,6 +96,6 @@ async def main_logic():
                         send_message(f'当前震荡超过{is_f}{zf}%,当前价格:{current_price}')
             except:
                 print("异常解析")
-                
+
 asyncio.get_event_loop().run_until_complete(main_logic())
 
