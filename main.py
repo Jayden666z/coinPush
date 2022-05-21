@@ -32,7 +32,6 @@ current_min_send = 0
 
 
 def send_message(message):
-    current_min_send = current_min_send + 1
     bot.send_message(chat_id, message)
     print(current_min_send)
 
