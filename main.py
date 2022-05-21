@@ -14,15 +14,11 @@ import websockets
 import requests
 import asyncio
 
-os.environ["http_proxy"] = "http://127.0.0.1:7890"
-os.environ["https_proxy"] = "http://127.0.0.1:7890"
-os.environ["socks5"] = "http://127.0.0.1:7890"
+
 
 print('运行成功！')
 r = requests.get('https://api2.binance.com/api/v3/ticker/price')
 print(r.json())
-proxies = {'http': "socks5://127.0.0.1:7890",
-           'https': "socks5://127.0.0.1:7890"}
 bot = telebot.TeleBot("5378351752:AAFek7mwdQOL1yx_HNn741hJamgFRMJS0aY")
 chat_id = '685775649'
 bot.send_message(chat_id, "运行成功！")
